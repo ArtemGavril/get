@@ -1,9 +1,9 @@
 import RPi.GPIO as gpio
 
 gpio.setmode(gpio.BCM)
-gpio.setup([22, 20], gpio.OUT)
+gpio.setup([23, 20], gpio.OUT)
 
-p = gpio.PWM(22, 1000)
+p = gpio.PWM(23, 1000)
 p.start(0)
 
 led = gpio.PWM(20, 1000)
@@ -16,5 +16,5 @@ try:
 
     
 finally:
-    gpio.output([22, 20], 0)
+    gpio.output([23, 20], 0)
     gpio.cleanup()
